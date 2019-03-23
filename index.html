@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+	<title>Sequences</title>
+	<meta name="keywords" content="Phil Ewels, Sequences, Bioinformatics" />
+	<meta name="copyright" content="copyright 2016 Phil Ewels" />
+	<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="content">
+		<h1>Enter Your Sequences</h1>
+
+		<form>
+			<p><label for="input">Your Sequence:</label> <input type="text" id="input" placeholder="sequence"/></p>
+			<p>
+				<label id="dna_label"><input type="radio" name="seq_type" value="DNA" checked="checked" /> DNA</label>
+			  <label id="rna_label"><input type="radio" name="seq_type" value="RNA" /> RNA</label>
+			</p>
+		</form>
+
+		<div id="results">
+			<p id="dsDNA_label">dsDNA:</p>
+			<div>
+				<button class="button button-copy top-button" title="Copy to clipboard">
+					<svg width="13" height="14.84" viewBox="0 0 1024 896" xmlns="http://www.w3.org/2000/svg">
+  					<path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z" />
+					</svg>
+				</button><pre class="as_input"></pre>
+			</div>
+			<div>
+				<button class="button button-copy bottom-button" title="Copy to clipboard">
+					<svg width="13" height="14.84" viewBox="0 0 1024 896" xmlns="http://www.w3.org/2000/svg">
+  					<path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z" />
+					</svg>
+				</button><pre class="complement"></pre>
+			</div>
+
+			<p>Reverse Complement:</p>
+			<div>
+				<button class="button button-copy" title="Copy to clipboard">
+					<svg width="13" height="14.84" viewBox="0 0 1024 896" xmlns="http://www.w3.org/2000/svg">
+  					<path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z" />
+					</svg>
+				</button><pre class="rev_complement"></pre>
+			</div>
+		
+			<p>Complement:</p>
+			<div >
+				<button class="button button-copy" title="Copy to clipboard">
+					<svg width="13" height="14.84" viewBox="0 0 1024 896" xmlns="http://www.w3.org/2000/svg">
+  					<path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z" />
+					</svg>
+				</button><pre class="complement"></pre>
+			</div>
+
+			<p>Reverse:</p>
+			<div>
+				<button class="button button-copy" title="Copy to clipboard">
+					<svg width="13" height="14.84" viewBox="0 0 1024 896" xmlns="http://www.w3.org/2000/svg">
+  					<path d="M128 768h256v64H128v-64z m320-384H128v64h320v-64z m128 192V448L384 640l192 192V704h320V576H576z m-288-64H128v64h160v-64zM128 704h160v-64H128v64z m576 64h64v128c-1 18-7 33-19 45s-27 18-45 19H64c-35 0-64-29-64-64V192c0-35 29-64 64-64h192C256 57 313 0 384 0s128 57 128 128h192c35 0 64 29 64 64v320h-64V320H64v576h640V768zM128 256h512c0-35-29-64-64-64h-64c-35 0-64-29-64-64s-29-64-64-64-64 29-64 64-29 64-64 64h-64c-35 0-64 29-64 64z" />
+					</svg>
+				</button><pre class="rev"></pre>
+			</div>
+		</div>
+	</div>
+
+	<div class="site-canvas" id="app">
+		<div class="dna">
+			<div class="dna_section" v-for="(dna,i) in sequence">
+				<div class="node top" v-bind:style="{'animation-delay' : (i * -300) + 'ms' }"></div>
+				<div class="node bottom" v-bind:style="{'animation-delay' : (i * -300) + 'ms' }"></div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Load external JS libraries from Google -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+	
+	<!-- Runnig Script-->
+	<script src="sequence.js" type="text/javascript"></script>
+
+	
+</body>
+</html>

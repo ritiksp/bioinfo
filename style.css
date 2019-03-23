@@ -1,0 +1,77 @@
+body {
+    margin:0;
+    padding:0;
+    color: #2d2d2d;
+    font-family: sans-serif;
+    font-size:18pt;
+    text-align: center;
+}
+body {
+  background: linear-gradient(to right, #1e5799 0%,#2ce0bf 19%,#76dd2c 40%,#dba62b 60%,#e02cbf 83%,#1e5799 100%); 
+  background-size: 10000px 100%;
+  animation: bg 15s linear infinite ;
+}
+
+@keyframes bg{
+  0%{
+    background-position-x: 0;
+  }
+  
+  100%{
+    background-position-x: 10000px;
+  }
+}
+#content { padding:20px 40px; }
+
+#input {
+    font-family:monospace;
+    padding:3px 5px;
+    width:300px;
+    line-height: 18px;
+}
+#rna_label { margin-left:20px; }
+#results p { margin: 25px auto 5px; }
+#results pre {
+    vertical-align: middle;
+    background-color:#dedede;
+    padding: 5px 8px;
+    margin: 0;
+    line-height: 17px;
+    height: 17px;
+    display:inline-block;
+}
+.hl {
+    background-color: #DEAFB2;
+}
+.button {
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    padding: 5px 8px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    -webkit-transition: background-color 0.1s, border-color 0.1s;
+transition: background-color 0.1s, border-color 0.1s;
+    outline:none;
+}
+.button:hover {
+    background-color: #ddd;
+    border-color: #999;
+}
+.top-button {
+    border-bottom: 1px solid transparent;
+    border-bottom-left-radius: 0;
+}
+.bottom-button {
+    border-top-left-radius: 0;
+}
+
+#credits {
+    font-size:8pt;
+    color:#999;
+    background-color:#ededed;
+    border-top:1px solid #ccc;
+    padding:10px 20px;
+}
+#credits a { color:#999; }
